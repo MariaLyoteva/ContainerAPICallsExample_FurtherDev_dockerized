@@ -6,8 +6,8 @@ This is a simple example project that demonstrates the use of Docker and Docker 
 
 The project consists of the following components:
 
-1. **Frontend**: A frontend application, located in the `frontend` directory.
-2. **Backend**: A backend application, located in the `backend` directory.
+1. **Frontend**: A frontend application (simple html page with fetch request to the backend), located in the `frontend` directory.
+2. **Backend**: A backend application (FastAPI backend), located in the `backend` directory.
 3. **Nginx Reverse Proxy**: An Nginx server that acts as a reverse proxy, forwarding requests to the frontend and backend services.
 
 Because of the NGINX reverse-proxy, we are able to call our backend with just `/api/` (the reverse-proxy is the only one exposed to the public and forwards requests with `/` to the fontend and requests with `/api` to the backend). This allows us to not worry about CORS-issues as everything is on the same domain. A good tutorial on this setup can be found [here](https://codingwithmanny.medium.com/create-an-nginx-reverse-proxy-with-docker-a1c0aa9078f1).
